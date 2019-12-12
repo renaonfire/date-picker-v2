@@ -1,5 +1,9 @@
 import { Component, h } from '@stencil/core';
 
+
+
+
+
 @Component({
   tag: 'dates-display',
   styleUrl: 'display.css',
@@ -31,6 +35,7 @@ componentDidLoad(){
   let selectedMonth = month;
   let selectedYear = year;
 
+  console.log(selectedDate);
 
   displayedDate.addEventListener("click", showCalendar);
  
@@ -42,7 +47,8 @@ componentDidLoad(){
 
 
   function showCalendar() {
-   cal.classList.toggle("active");
+    populateDates();
+    cal.classList.toggle("active");
   }
 
 
@@ -120,11 +126,6 @@ componentDidLoad(){
   
   }
 
- 
-
-  populateDates();
-
- 
 
 }
 
