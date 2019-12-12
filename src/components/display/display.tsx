@@ -1,7 +1,17 @@
 import { Component, h } from '@stencil/core';
 
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+ 
 
+let date = new Date();
+let day = date.getDate();
+let month = date.getMonth();
+let year = date.getFullYear();
 
+let selectedDate = date;
+let selectedDay = day;
+let selectedMonth = month;
+let selectedYear = year;
 
 
 @Component({
@@ -14,9 +24,6 @@ export class Display {
 
 componentDidLoad(){
   
-  
-  const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
- 
   const displayedDate = document.querySelector(".selected-date");
   const cal = document.querySelector(".calendar");
   const prevArrow = document.querySelector(".prev-mth");
@@ -25,15 +32,7 @@ componentDidLoad(){
   const days_element = document.querySelector(".days")
 
 
-  let date = new Date();
-  let day = date.getDate();
-  let month = date.getMonth();
-  let year = date.getFullYear();
-
-  let selectedDate = date;
-  let selectedDay = day;
-  let selectedMonth = month;
-  let selectedYear = year;
+ 
 
   console.log(selectedDate);
 
@@ -131,16 +130,6 @@ componentDidLoad(){
 
 
   render() {
-
-    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-
-  
-
-    let date = new Date();
-    let day = date.getDate();
-    let month = date.getMonth();
-    let year = date.getFullYear();
-
 
 
 
